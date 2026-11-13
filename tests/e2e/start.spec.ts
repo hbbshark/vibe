@@ -4,7 +4,7 @@ test("стартовый экран и запрос к серверу досту
 }) => {
   await page.goto("/");
   await expect(
-    page.getByRole("heading", { name: "Мой цифровой продукт" }),
+    page.getByRole("heading", { name: "Крутое дело" }),
   ).toBeVisible();
   await page.getByRole("link", { name: "Проверить серверный маршрут" }).click();
   await expect(page.locator("body")).toContainText('"ok":true');
